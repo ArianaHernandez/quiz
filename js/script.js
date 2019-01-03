@@ -2,7 +2,7 @@
 /*Superman answers are worth 2pts, batman answers are 5pts, ww answers are 10 pts*/
 
 $(document).ready(function() {
-    var totalScore;
+    var totalScore= 0;
     $("button").click(function() {
         var name = $("#name").val();
         var superPlacement = "TBD";
@@ -19,69 +19,92 @@ $(document).ready(function() {
         q4(q4Result);
         q5(q5Result);
         
-        if(totalScore<=20){
-            superPlacement="Superman"
-        }
+       
+        result(name,totalScore);
     });
     
     function q1(ans1){
-    if (ans1==="TAWOG" || ans1==="the amazing world of gumball"){
-        return totalScore+5;
+    if (ans1==="tawog" || ans1==="the amazing world of gumball"){
+        totalScore=totalScore+5;
     }else if(ans1==="we bare bears"){
-    return totalScore+2;
+   totalScore= totalScore+2;
     }
     else if(ans1==="elena of avalor"){
-        return totalScore+10;
+        totalScore= totalScore+10;
     }else{
-        return totalScore;
+        totalScore=totalScore;
     }
 }
  function q2(ans2){
     if (ans2==="a friend"){
-        return totalScore+2;
+        totalScore= totalScore+2;
     }else if(ans2==="a knife"){
-    return totalScore+5;
+    totalScore=totalScore+5;
     }
     else if(ans2==="a rope"){
-        return totalScore+10;
+        totalScore= totalScore+10;
     }else{
-        return totalScore;
+        totalScore=totalScore;
     }
  }
  function q3(ans3){
     if (ans3==="dog"){
-        return totalScore+2;
+        totalScore= totalScore+2;
     }else if(ans3==="a bat"){
-    return totalScore+5;
+    totalScore=totalScore+5;
     }
     else if(ans3==="cheetah"){
-        return totalScore+10;
+        totalScore= totalScore+10;
     }else{
-        return totalScore;
+        totalScore=totalScore;
     }
  }
   function q4(ans4){
     if (ans4==="commitment"){
-        return totalScore+10;
+        totalScore= totalScore+10;
     }else if(ans4==="geology"){
-    return totalScore+2;
+    totalScore=totalScore+2;
     }
     else if(ans4==="clowns"){
-        return totalScore+5;
+        totalScore= totalScore+5;
     }else{
-        return totalScore;
+        totalScore=totalScore;
     }
  }
    function q5(ans5){
     if (ans5==="farming"){
-        return totalScore+2;
+        totalScore= totalScore+2;
     }else if(ans5==="video games"){
-    return totalScore+5;
+    totalScore= totalScore+5;
     }
     else if(ans5==="secret dating "){
-        return totalScore+10;
+        totalScore= totalScore+10;
     }else{
-        return totalScore;
+        totalScore= totalScore;
     }
- }
+   }
+   function result(name,num){
+   if(num>9 && num<25){
+        $("button").hide();
+       $(".placement").text("Congratulations"+name+"You are");
+       $(".hero").text("Superman");
+       $(".placement2").text("You are friendly, loyal and strong");
+         }
+    else if(num>24&&num<50){
+         $("button").hide();
+       $(".placement").text("Congratulations"+name+"You are");
+       $(".hero").text("Batman");
+       $(".placement2").text("You are tactical, smart, and have a dark sense of humor");
+    } else if(num>=50){
+         $("button").hide();
+        $(".placement").text("Congratulations "+name+"You are");
+       $(".hero").text("Wonder Woman");
+       $(".placement2").text("You are a born leader, independent, and agile");
+    }else{
+     $(".placement").text("You aren't any of the original heroes, "+name);
+      $(".hero").text("You're BoosterGold, because you can't follow directions");
+       
+    }
+    
+   }
 });
