@@ -5,7 +5,7 @@ $(document).ready(function() {
     var totalScore;
     $("button").click(function() {
         var name = $("#name").val();
-        var techPlacement = "TBD";
+        var superPlacement = "TBD";
         var imgSrc = "https://media.giphy.com/media/22zgHX8aop488/giphy.gif";
         var q1Result = $("#question1").val();
         var q2Result = $("#question2").val();
@@ -18,6 +18,10 @@ $(document).ready(function() {
         q3(q3Result);
         q4(q4Result);
         q5(q5Result);
+        
+        if(totalScore<=20){
+            superPlacement="Superman"
+        }
     });
     
     function q1(ans1){
@@ -38,7 +42,7 @@ $(document).ready(function() {
     }else if(ans2==="a knife"){
     return totalScore+5;
     }
-    else if(an2==="a rope"){
+    else if(ans2==="a rope"){
         return totalScore+10;
     }else{
         return totalScore;
