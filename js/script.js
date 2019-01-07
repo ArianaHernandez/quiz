@@ -50,7 +50,7 @@ $(document).ready(function() {
  function q3(ans3){
     if (ans3==="dog"){
         totalScore= totalScore+2;
-    }else if(ans3==="a bat"){
+    }else if(ans3==="bat"){
     totalScore=totalScore+5;
     }
     else if(ans3==="cheetah"){
@@ -77,34 +77,51 @@ $(document).ready(function() {
     }else if(ans5==="video games"){
     totalScore= totalScore+5;
     }
-    else if(ans5==="secret dating "){
+    else if(ans5==="secret dating"){
         totalScore= totalScore+10;
     }else{
         totalScore= totalScore;
     }
    }
    function result(name,num){
-   if(num>9 && num<25){
+       if(num<10){
+     $("button").hide();
+       $(".result").css("color","gold");
+        $(".result").css("background-color","blue");
+         $("body").css("background-image","url('https://66.media.tumblr.com/80876c77fd6699758a855b27901163e3/tumblr_osuva5as6N1thn7k6o1_400.gif')");
+       $("body").css("background-size","cover");
+       $("body").css("background-repeat","no-repeat");
+     $(".placement").text("You aren't any of the original heroes, "+name);
+      $(".hero").text("You're Booster Gold, because you can't follow directions");
+       }
+     else if(num<25){
+       $(".result").css("color","blue");
+           $("body").css("background-image","url('https://media.giphy.com/media/12PKZzezmy2vqE/giphy.gif')");
+       $("body").css("background-size","cover");
+       $("body").css("background-repeat","no-repeat");
         $("button").hide();
-       $(".placement").text("Congratulations"+name+"You are");
+       $(".placement").text("Congratulations, "+name+". You are");
        $(".hero").text("Superman");
        $(".placement2").text("You are friendly, loyal and strong");
          }
-    else if(num>24&&num<50){
+    else if(num<50){
          $("button").hide();
-       $(".placement").text("Congratulations"+name+"You are");
+           $("body").css("background-image","url('https://media.giphy.com/media/10yeoHw5v2dk2s/giphy.gif')");
+       $("body").css("background-size","cover");
+       $("body").css("background-repeat","no-repeat");
+          $(".result").css("color","grey");
+       $(".placement").text("Congratulations, "+name+". You are");
        $(".hero").text("Batman");
        $(".placement2").text("You are tactical, smart, and have a dark sense of humor");
-    } else if(num>=50){
+    } else{
          $("button").hide();
-        $(".placement").text("Congratulations "+name+"You are");
+          $("body").css("background-image","url('https://thumbs.gfycat.com/SkeletalGiddyJaguar-size_restricted.gif')");
+       $("body").css("background-size","cover");
+       $("body").css("background-repeat","no-repeat");
+          $(".result").css("color","red");
+        $(".placement").text("Congratulations, "+name+". You are");
        $(".hero").text("Wonder Woman");
        $(".placement2").text("You are a born leader, independent, and agile");
-    }else{
-     $(".placement").text("You aren't any of the original heroes, "+name);
-      $(".hero").text("You're BoosterGold, because you can't follow directions");
-       
     }
-    
    }
 });

@@ -40,19 +40,27 @@ a {
 
 .result {
    text-align:center;
+     
 }
 
 button {
     margin-top: 10px;
     color: white;
-    background-color: red;
+    background-image:url("https://images.alphacoders.com/241/thumb-1920-241901.jpg");
+    background-size:cover;
     font-size: 40px;
     border-radius: 25px;
     border:3px groove black ;
     font-family: monospace;
+   width:800px;
+   height:500px;
 }
 
 body{
 
     margin-left:20px;
+    background-image:  linear-gradient(gold,blue,red,grey,black);
+}
+.result{
+ font-size:20px;   
 }
