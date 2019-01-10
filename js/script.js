@@ -13,6 +13,7 @@ $(document).ready(function() {
         var q4Result = $("#question4").val();
         var q5Result = $("#question5").val();
         
+
         q1(q1Result);
         q2(q2Result);
         q3(q3Result);
