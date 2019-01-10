@@ -36,24 +36,24 @@ $(document).ready(function() {
     }
 }
  function q2(ans2){
-    if (ans2==="a friend"){
+    if (ans2==="a friend"||ans2==="friend"){
         totalScore= totalScore+2;
-    }else if(ans2==="a knife"){
+    }else if(ans2==="a knife"||ans2==="knife"){
     totalScore=totalScore+5;
     }
-    else if(ans2==="a rope"){
+    else if(ans2==="a rope"||ans2==="rope"){
         totalScore= totalScore+10;
     }else{
         totalScore=totalScore;
     }
  }
  function q3(ans3){
-    if (ans3==="dog"){
+    if (ans3==="dog"||ans3==="a dog"){
         totalScore= totalScore+2;
-    }else if(ans3==="bat"){
+    }else if(ans3==="bat"||ans3==="a bat"){
     totalScore=totalScore+5;
     }
-    else if(ans3==="cheetah"){
+    else if(ans3==="cheetah"||ans3==="a cheetah"){
         totalScore= totalScore+10;
     }else{
         totalScore=totalScore;
