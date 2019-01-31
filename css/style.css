@@ -57,7 +57,7 @@ button {
 }
 
 body{
-
+    cursor:url(too683.cur),auto;
     margin-left:20px;
     background-image:  linear-gradient(gold,blue,red,grey,black);
 }
