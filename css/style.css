@@ -55,7 +55,21 @@ button {
    width:800px;
    height:500px;
 }
-
+#question1:hover{
+      cursor:url(darwin.cur),auto;  
+}
+#question2:hover{
+      cursor:url(knife.cur),auto;  
+}
+#question3:hover{
+      cursor:url(cheetah.cur),auto;  
+}
+#question4:hover{
+      cursor:url(Joker.cur),auto;  
+}
+#question5:hover{
+      cursor:url(pig.cur),auto;  
+}
 body{
     cursor:url(too683.cur),auto;
     margin-left:20px;
